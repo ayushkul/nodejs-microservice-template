@@ -1,4 +1,4 @@
-# node-microservice-template #
+# nodejs-microservice-template 
 
 ### What is this repository for? ###
 
