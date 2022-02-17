@@ -2,7 +2,7 @@ import Config from '.'
 import mongoose from 'mongoose'
 
 export default class DBConnection {
-  static connect () {
+  static async connect() {
     console.log('DB trying to connect on ' + new Date() + ' to url' + Config.DB)
 
     const options = {
@@ -12,6 +12,6 @@ export default class DBConnection {
       useNewUrlParser: true,
       useUnifiedTopology: true
     }
-    return mongoose.connect(Config.DB, options)
+    await mongoose.connect(Config.DB, options)
   }
 }
